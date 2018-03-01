@@ -1,0 +1,22 @@
+.slide-3d {
+  border-radius: 4px;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  background-size: cover;
+  height: 100%;
+}
+.slide-3d figure img {
+  width: 100%;
+}
+.slide-3d figure figcaption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  padding: 7px 10px;
+}

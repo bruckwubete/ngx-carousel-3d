@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -16,5 +16,13 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+
+<div class="row">
+  <ngx-carousel-3d [slides]="slides" [options]="options" class="col-12" #carousel>
+    <ngx-carousel-3d-slide *ngFor="let slide of slides; let i = index" (click)="slideClicked(i)">
+      <img class="slide-img" src="{{slide.src}}" alt=""/>
+    </ngx-carousel-3d-slide>
+  </ngx-carousel-3d>
+</div>
 

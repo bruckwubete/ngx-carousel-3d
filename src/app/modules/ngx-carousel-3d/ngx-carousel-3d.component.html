@@ -1,0 +1,16 @@
+<div class="carousel-3d-container">
+  <div class="carousel-3d-loader" [hidden]="!isLoading">
+      <div class="carousel-3d-loader-circle"></div>
+      <div class="carousel-3d-loader-percentage">{{ percentLoaded }}</div>
+  </div>
+  <div  [hidden]="isLoading" [ngSwitch]="isSuccessful" >
+      <div #carousel3D class="carousel-3d" [hidden]="!isRendered && !isSuccessful">
+          <ng-content></ng-content>
+      </div>
+      <p  [hidden]="isSuccessful"  class="carousel-3d-loader-error">There was a problem during load</p>
+      <div *ngIf="controls" class="carousel-3d-controls">
+          <div class="carousel-3d-next arrow-left" (click)="options.dir === 'ltr' ? goNext() : goPrev()"></div>
+          <div class="carousel-3d-prev arrow-right" (click)="options.dir === 'ltr' ? goPrev() : goNext()"></div>
+      </div>
+  </div>
+</div>

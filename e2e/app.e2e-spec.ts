@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng2-carousel App', () => {
+describe('ngx-carousel App', () => {
   let page: AppPage;
 
   beforeEach(() => {
