@@ -1,7 +1,11 @@
 {
   "name": "ngx-carousel-3d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruckwubete/ngx-carousel-3d.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
