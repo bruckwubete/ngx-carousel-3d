@@ -25,6 +25,7 @@ export class NgxCarousel3dComponent implements OnInit, OnDestroy, OnChanges {
     @Input() onLastSlide: Function;
     @Input() onSlideChange: Function;
     @Input() onSelectedClick: Function;
+    @Input() slideClass:string;
 
 
     public isLoading = true;
@@ -79,7 +80,7 @@ export class NgxCarousel3dComponent implements OnInit, OnDestroy, OnChanges {
 
 
 
-                    this.$wrapper = jquery('div.carousel-3d');
+                    this.$wrapper = jquery('div.'+this.slideClass);
                     this.$wrapper.css({'width': outerWidth + 'px', 'height': outerHeight + 'px'});
                     this.$slides = this.$wrapper.children().toArray();
 
