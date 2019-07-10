@@ -80,7 +80,11 @@ export class NgxCarousel3dComponent implements OnInit, OnDestroy, OnChanges {
 
 
 
-                    this.$wrapper = jquery('div.'+this.slideClass);
+                    if(this.slideClass){
+                    this.$wrapper = jquery('div.'+this.slideClass);                    
+                    }else{
+                    this.$wrapper = jquery('div.carousel-3d');
+                    }
                     this.$wrapper.css({'width': outerWidth + 'px', 'height': outerHeight + 'px'});
                     this.$slides = this.$wrapper.children().toArray();
 
