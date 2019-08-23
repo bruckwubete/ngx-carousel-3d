@@ -4,7 +4,7 @@
       <div class="carousel-3d-loader-percentage">{{ percentLoaded }}</div>
   </div>
   <div  [hidden]="isLoading" [ngSwitch]="isSuccessful" >
-      <div #carousel3D class="carousel-3d" [hidden]="!isRendered && !isSuccessful">
+      <div #carousel3D [ngClass]="[slideClass,'carousel-3d']" [hidden]="!isRendered && !isSuccessful">
           <ng-content></ng-content>
       </div>
       <p  [hidden]="isSuccessful"  class="carousel-3d-loader-error">There was a problem during load</p>
