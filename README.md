@@ -56,7 +56,8 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<ngx-carousel-3d [slides]="slides" [options]="options" class="col-12" #carousel>
+<p> use a unique [slideClass] if you are using the ngx-carousel-3d multiple times in a single page<p>
+<ngx-carousel-3d [slides]="slides" [options]="options" [slideClass]="'someUniqueClass'" class="col-12" #carousel>
     <ngx-carousel-3d-slide *ngFor="let slide of slides; let i = index" (click)="slideClicked(i)">
         <img class="slide-img" src="{{slide.src}}" alt=""/>
     </ngx-carousel-3d-slide>
